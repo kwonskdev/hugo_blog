@@ -1,0 +1,13 @@
+[category]
+    [category.main]
+    list = ["hugo", "python", "etc"]
+        [category.sub1]
+        hugo = ["Front-end", "Back-end"]
+        python = ["Data", "Django"]
+        etc = ["Cook", "Book"]
+
+        [category.sub2]
+        Front-end = []
+        Back-end = []
+        Data = []
+        Django = []

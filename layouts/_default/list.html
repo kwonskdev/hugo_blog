@@ -2,16 +2,49 @@
 
   {{ partial "page-title.html" . }}
 
-  <!-- blog -->
-  <section class="section">
-    <div class="container">
-      <div class="row">
-        {{ range .Data.Pages }}
-        {{ .Render "post" }}
-        {{ end }}
-      </div>
+<div id="page-wrapper">
+  <!-- 사이드바 -->
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="sidebar-brand">
+        카테고리
+      </li>
+      {{ range index $.Site.Data.subclist.category.main "list" }}
+      <li>
+        <a href="{{ $.Site.BaseURL }}portfolio/project-2" style="display: inline;">{{ . | humanize }}</a>
+        <button class="dropdown-btn" onclick="dropdownmenu(this);">
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-container">
+          {{ range index $.Site.Data.subclist.category.sub1 . }}
+          <a href="#"> {{ . | humanize }} </a>
+          <!-- TODO: 하위 메뉴가 있을 때만 dropdown -->
+          <!-- TODO: sub1의 화살표가 글자랑 같은 높이에 있게 -->
+          <!-- <button class="dropdown-btn" onclick="dropdownmenu(this);">
+            <i class="fa fa-caret-down"></i>
+          </button>
+          {{ range index $.Site.Data.subclist.category.sub2 . }}
+          <div class="dropdown-container">
+            <a href="#"> {{ . | humanize }} </a>
+          </div> 
+          {{ end }} -->
+          {{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  <!-- /사이드바 -->
+</div>
+
+<div class="section" id="blog-list">
+  <div class="container">
+    <div class="row">
+      {{ range .Data.Pages }}
+      {{ .Render "post" }}
+      {{ end }}
     </div>
-  </section>
-  <!-- /blog -->
+  </div>
+</div>
 
 {{ end }}

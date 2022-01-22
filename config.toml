@@ -29,14 +29,24 @@ link = "plugins/google-map/map.js"
 
 # menu
 [[menu.main]]
+URL = "about"
+name = "About"
+weight = 1
+
+[[menu.main]]
 URL = "blog"
 name = "Blog"
-weight = 1
+weight = 2
 
 [[menu.main]]
 URL = "portfolio"
 name = "Portfolio"
-weight = 2
+weight = 3
+
+[[menu.main]]
+URL = "contact"
+name = "Contact"
+weight = 4
 
 
 # default parameters
@@ -46,25 +56,27 @@ logo = ""
 # theme color
 theme_color = "#41228e"
 # contact info
-phone = "010-5559-1058"
+phone = "+880 2544 658 256"
 email = "nerochaos9@naver.com"
 address = "서울특별시 마포구"
 # meta description
 author = "권순규"
-description = ""
+description = "This is meta description"
 # google analytics
-#  google_analytics_id = "" # Your ID
+google_analytics_id = "" # Your ID
 # baidu site verification
-#  baidu_site_verification = "" #Your verification code
+baidu_site_verification = "" #Your verification code
 # baidu analytics
-# baidu_analytics_id = "" #Your ID
+baidu_analytics_id = "" #Your ID
 # copyright
-# copyright = "Copyright &copy; 2022 a Theme by [Gethugothemes](https://gethugothemes.com)"
+copyright = "Copyright &copy; 2021 a Theme by [Gethugothemes](https://gethugothemes.com)"
+custom_css = ["css/custom.css"]
+custom_js = ["js/custom.js"]
 
 
 # preloader
 [params.preloader]
-enable = false
+enable = true
 preloader = "images/preloader.gif" # use png, jpg, svg or gif format
 
 # contact
@@ -82,12 +94,22 @@ map_marker = "images/marker.png"
 
 # cookies
 [params.cookies]
-enable = false
+enable = true
 expire_days = 2
 
 # social site
-# 화면 9시 방향에 social network service로 이동할 수 있는 아이콘인데
-# 사용하고 싶으면 아래와 같은형태로 추가
-# [[params.social]]
-# icon = "ti-facebook"
-# URL = "#"
+[[params.social]]
+icon = "ti-facebook"
+URL = "#"
+
+[[params.social]]
+icon = "ti-instagram"
+URL = "#"
+
+[[params.social]]
+icon = "ti-dribbble"
+URL = "#"
+
+[[params.social]]
+icon = "ti-twitter-alt"
+URL = "#"
